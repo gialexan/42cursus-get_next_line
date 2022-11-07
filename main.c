@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 16:22:33 by gialexan          #+#    #+#             */
-/*   Updated: 2022/07/07 16:26:52 by gialexan         ###   ########.fr       */
+/*   Created: 2022/11/07 13:11:29 by gialexan          #+#    #+#             */
+/*   Updated: 2022/11/07 13:46:11 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
 #include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
 
-// test function read
-// test file descriptor
-// test all value in BUFFER_SIZE -> flag = -D BUFFER_SIZE=2
+int main(void)
+{
+	char	*temp;
+	int	fd;
+
+	fd = open("myfile.txt", O_RDONLY);
+
+	while(1)
+	{
+		temp = get_next_line(fd);
+		if (!temp)
+		break ;
+		printf("%s", temp);
+		free(temp);
+	}
+	return (0);
+}
+
+/*
+//test function read
+//test file descriptor
+//test all value in BUFFER_SIZE -> flag = -D BUFFER_SIZE=2
 int	main(int argc, char **argv)
 {
 	int		fd;
@@ -32,3 +52,4 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+*/
