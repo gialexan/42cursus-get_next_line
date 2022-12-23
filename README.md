@@ -4,8 +4,16 @@ My implementation of the get_next_line function, similar to the [fgets](https://
 ### What is get_next_line?
 Get_next_line is an individual project in [42](https://www.42sp.org.br) that requiries us to create in C a function that reads a file line after line.
 
-### Badge
+#### Badge
 <img src="get_next_linem.png" width="150" height="150"/>
+
+#### Objectives
+- Unix logic
+
+#### Skills
+- Unix
+- Rigor
+- Algorithms & AI
 
 #### My grade
 <img src="score.png" width="150" height="150"/>
