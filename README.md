@@ -26,7 +26,7 @@ git clone https://github.com/gialexan/get_next_line-42 && cd get_next_line-42/
 # Create a file do read
 touch myfile.txt
 # Write in file
-echo "Test get_next_line " > text.txt or ls > text.txt
+echo "Test get_next_line " > myfile.txt or ls -l > myfile.txt
 # Compile the files, example:
 clang main.c get_next_line.c get_next_line_utils.c
 # Execute your program
