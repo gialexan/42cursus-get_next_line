@@ -22,7 +22,7 @@ Get_next_line is an individual project in [42](https://www.42sp.org.br) that req
 **Follow the steps below**
 ```bash
 # Clone the project and access the folder
-git clone https://github.com/gialexan/get_next_line-42 && cd get_next_line-42/
+git clone https://github.com/gialexan/42cursus-get_next_line && cd 42cursus-get_next_line/
 # Create a file do read
 touch myfile.txt
 # Write in file
