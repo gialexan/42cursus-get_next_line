@@ -6,26 +6,25 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:11:29 by gialexan          #+#    #+#             */
-/*   Updated: 2022/11/07 13:46:11 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/09/06 08:05:34 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 #include <fcntl.h>
 #include <stdio.h>
+#include "get_next_line.h"
 
-int main(void)
+int	main(void)
 {
 	char	*temp;
-	int	fd;
+	int		fd;
 
 	fd = open("myfile.txt", O_RDONLY);
-
-	while(1)
+	while (1)
 	{
 		temp = get_next_line(fd);
 		if (!temp)
-		break ;
+			break ;
 		printf("%s", temp);
 		free(temp);
 	}
@@ -33,9 +32,9 @@ int main(void)
 }
 
 /*
-//test function read
-//test file descriptor
-//test all value in BUFFER_SIZE -> flag = -D BUFFER_SIZE=2
+// Test function read
+// Test file descriptor
+// Test all value in BUFFER_SIZE -> flag = -D BUFFER_SIZE=2
 int	main(int argc, char **argv)
 {
 	int		fd;
